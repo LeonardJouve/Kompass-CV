@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.Kompass">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity android:name="com.example.Kompass.update" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.Kompass.help" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.Kompass.settings" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.Kompass.profil" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.Kompass.Tablayout" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.Kompass.fouille" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.Kompass.MainActivity" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.Kompass.resetPassword" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+
+                <data
+                    android:host="resetpassword.kompass.com"
+                    android:scheme="https" />
+            </intent-filter>
+        </activity>
+        <activity android:name="com.example.Kompass.forgotPassword" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.Kompass.CreateAccount" android:screenOrientation="portrait"/>
+        <activity android:name="com.example.Kompass.ConnectAccount" android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="@string/APIKEY_GoogleMaps" />
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+    </application>
+
+</manifest>

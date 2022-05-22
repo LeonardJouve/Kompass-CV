@@ -1,0 +1,342 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ConstraintLayout"
+    android:paddingTop="25dp"
+    android:paddingStart="25dp"
+    android:paddingEnd="25dp"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayoutCraft"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="25dp"
+        tools:visibility="visible">
+
+        <TextView
+            android:id="@+id/textViewPreviewMetadata"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="5dp"
+            app:layout_constraintEnd_toEndOf="@+id/cadreResultat"
+            app:layout_constraintStart_toStartOf="@+id/cadreResultat"
+            app:layout_constraintTop_toBottomOf="@+id/cadreResultat" />
+
+        <TextView
+            android:id="@+id/textViewMultiplicateur"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingTop="1dp"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            app:layout_constraintStart_toStartOf="@+id/imageViewFleche"
+            app:layout_constraintEnd_toEndOf="@+id/imageViewFleche"
+            app:layout_constraintTop_toBottomOf="@+id/imageViewFleche" />
+
+        <ImageView
+            android:id="@+id/imageViewFleche"
+            android:layout_width="130dp"
+            android:layout_height="151dp"
+            app:layout_constraintBottom_toTopOf="@id/cadreMaterial3"
+            app:layout_constraintStart_toEndOf="@+id/cadreMaterial2"
+            app:layout_constraintTop_toBottomOf="@id/cadreMaterial1"
+            app:srcCompat="@drawable/ic_flechesvg" />
+
+        <ImageView
+            android:id="@+id/cadreMaterial1"
+            style="?android:borderlessButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="30dp"
+            android:foreground="@drawable/cadre"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/cadreMaterial2"
+            style="?android:borderlessButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:foreground="@drawable/cadre"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cadreMaterial1" />
+
+        <ImageView
+            android:id="@+id/cadreMaterial3"
+            style="?android:borderlessButtonStyle"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_marginTop="15dp"
+            android:foreground="@drawable/cadre"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/cadreMaterial2" />
+
+        <ImageView
+            android:id="@+id/cadreMarteau"
+            style="?android:borderlessButtonStyle"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginBottom="30dp"
+            android:foreground="@drawable/cadre"
+            app:layout_constraintBottom_toBottomOf="@id/cadreMaterial2"
+            app:layout_constraintStart_toEndOf="@id/cadreMaterial2"
+            app:layout_constraintTop_toTopOf="@id/cadreMaterial1"
+            app:srcCompat="@drawable/marteau_modele" />
+
+        <ImageView
+            style="?android:borderlessButtonStyle"
+            android:id="@+id/cadreResultat"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:foreground="@drawable/cadre"
+            app:layout_constraintBottom_toTopOf="@id/cadreMaterial3"
+            app:layout_constraintStart_toEndOf="@id/imageViewFleche"
+            app:layout_constraintTop_toBottomOf="@id/cadreMaterial1"
+            app:srcCompat="@drawable/preview_craft" />
+
+        <SeekBar
+            android:id="@+id/slider"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="30dp"
+            android:max="10"
+            android:thumbTint="@color/teal_700"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cadreMaterial3" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+            android:scaleY="5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="50dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/buttonCraft" />
+
+        <TextView
+            android:id="@+id/textViewSlider"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@id/slider"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/buttonCraft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="@color/teal_700"
+            android:textColor="@color/White"
+            android:text="Fabriquer"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/slider" />
+
+        <ImageView
+            android:id="@+id/imageViewClose"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/croix" />
+
+        <ListView
+            android:id="@+id/listViewMaterial1"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/cadreMaterial1"
+            app:layout_constraintTop_toTopOf="@id/cadreMaterial1" />
+
+        <ListView
+            android:id="@+id/listViewMaterial2"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/cadreMaterial2"
+            app:layout_constraintTop_toTopOf="@id/cadreMaterial2" />
+
+        <ListView
+            android:id="@+id/listViewMaterial3"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:visibility="gone"
+            app:layout_constraintStart_toEndOf="@id/cadreMaterial3"
+            app:layout_constraintTop_toTopOf="@id/cadreMaterial3" />
+
+        <ListView
+            android:id="@+id/listViewMarteau"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:background="#FFFFFF"
+            android:visibility="gone"
+            android:layout_marginStart="10dp"
+            app:layout_constraintStart_toStartOf="@id/cadreMarteau"
+            app:layout_constraintTop_toTopOf="@id/cadreMarteau" />
+
+        <ImageView
+            android:visibility="gone"
+            android:id="@+id/imageViewAnimCraft"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_marginBottom="60dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/imageViewClose" />
+
+        <TextView
+            android:visibility="gone"
+            android:id="@+id/textViewAnimCraft"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="30sp"
+            app:layout_constraintStart_toEndOf="@+id/imageViewAnimCraft"
+            app:layout_constraintBottom_toBottomOf="@id/imageViewAnimCraft"
+            app:layout_constraintTop_toTopOf="@id/imageViewAnimCraft" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <ScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        tools:layout_editor_absoluteX="25dp"
+        tools:layout_editor_absoluteY="25dp">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:visibility="gone">
+
+            <TextView
+                android:id="@+id/textViewNourriture"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nourriture:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <com.example.Kompass.ExpandableHeightGridView
+                android:id="@+id/gridViewNourriture"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="false"
+                android:numColumns="4"
+                android:paddingTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewNourriture">
+
+            </com.example.Kompass.ExpandableHeightGridView>
+
+            <TextView
+                android:id="@+id/textViewMateriaux"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:text="Matériaux:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gridViewNourriture" />
+
+            <com.example.Kompass.ExpandableHeightGridView
+                android:id="@+id/gridViewMateriaux"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="false"
+                android:numColumns="4"
+                android:paddingTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewMateriaux" />
+
+            <TextView
+                android:id="@+id/textViewEquipement"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:text="Équipement:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gridViewMateriaux" />
+
+            <com.example.Kompass.ExpandableHeightGridView
+                android:id="@+id/gridViewEquipement"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="false"
+                android:numColumns="4"
+                android:paddingTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewEquipement" />
+
+            <TextView
+                android:id="@+id/textViewArmes"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:text="Armes:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gridViewEquipement" />
+
+            <com.example.Kompass.ExpandableHeightGridView
+                android:id="@+id/gridViewArmes"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="false"
+                android:numColumns="4"
+                android:paddingTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewArmes" />
+
+            <TextView
+                android:id="@+id/textViewOutlis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="15dp"
+                android:text="Outils:"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/gridViewArmes" />
+
+            <com.example.Kompass.ExpandableHeightGridView
+                android:id="@+id/gridViewOutlis"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:isScrollContainer="false"
+                android:numColumns="4"
+                android:paddingTop="10dp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textViewOutlis">
+
+            </com.example.Kompass.ExpandableHeightGridView>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </ScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+

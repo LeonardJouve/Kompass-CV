@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:id="@+id/item1"
+        android:title="A-Z"/>
+    <item android:id="@+id/item2"
+        android:title="Z-A"/>
+    <item android:id="@+id/item3"
+        android:title="&lt;"/> <!--"<"-->
+    <item android:id="@+id/item4"
+        android:title="&gt;"/> <!--">"-->
+    <item android:id="@+id/item5"
+        android:title="catégories">
+        <menu>
+            <item android:id="@+id/subitem1"
+                android:title="ressources"/>
+            <item android:id="@+id/subitem2"
+                android:title="minerais"/>
+            <item android:id="@+id/subitem3"
+                android:title="nourriture"/>
+            <item android:id="@+id/subitem4"
+                android:title="équipement"/>
+            <item android:id="@+id/subitem5"
+                android:title="toutes"/>
+
+        </menu>
+    </item>
+</menu>

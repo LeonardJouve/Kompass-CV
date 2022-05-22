@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Kompass</string>
+    <string name="APIKEY_GoogleMaps">GOOGLEMAPAPIKEY</string>
+    <string name="APIKEY_OpenTripMap">OPENTRIPMAPAPIKEY</string>
+    <string name="APIKEY_OpenWeatherMap">OPENWEATHERMAPAPIKEY</string>
+    <string name="DATABASE_DOMAINE">https://mobile.jouvefamily.ch/kompass/</string>
+</resources>
